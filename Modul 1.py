@@ -195,7 +195,8 @@ def katakan(n):
 
     else:
         return "Jumlah tidak boleh lebih dari 1 milyar"
-
+#print(katakan(x))
+#x diganti angka dalam jutaan misal 2345678
 #14
 def formatRupiah(angka):
     angka = str(angka)
