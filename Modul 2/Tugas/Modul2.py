@@ -95,6 +95,18 @@ class Mahasiswa(Manusia):
         return self.uangSaku
     def tambahUangSaku(self, tambahUang):
         self.uangSaku += int(tambahUang)
+#4
+    listKuliah = []
+    def ambilKuliah(self,Makul):
+        self.listKuliah.append(Makul)
+#5
+    def hapusKuliah(self,Makul):
+        if Makul in self.listKuliah:
+            self.listKuliah.remove(Makul)
+            print("Berhasil Menghapus Kuliah",Makul,"dari List")
+        else:
+            print("Mata Kuliah",Makul,"belum diambil")
+
 
 ##m9 = Mahasiswa('Jarot',247,'Colomadu',200000)
 ##print(m9.ambilKotaTinggal())
@@ -112,30 +124,17 @@ class Mahasiswa(Manusia):
 ##alamat = input("Masukkan Alamat : ")
 ##uangSaku = int(input("Masukkan Uang Saku : "))
 ##print(Mahasiswa(nama,nim,alamat,uangSaku))
-
-#4
-class ListKuliah(Mahasiswa):
-    def __init__(self):
-        self.mataKuliah = []
-    def ambilKuliah(self,Makul):
-        self.mataKuliah.append(Makul)
-    def listKuliah(self):
-        return self.mataKuliah
-#5
-    def hapusKuliah(self,Makul):
-        self.mataKuliah.remove(Makul)
-        print("Berhasil Menghapus Kuliah",Makul,"dari List")
-    
+  
 ###Run no 4
-##m234 = ListKuliah()
-##print(m234.listKuliah())
+##m234 = Mahasiswa('nama',247,'alamat',200000)
+##print(m234.listKuliah)
 ##m234.ambilKuliah('Matematika Diskrit')
-##print(m234.listKuliah())
+##print(m234.listKuliah)
 ##m234.ambilKuliah('Agoritma dan Struktur Data')
-##print(m234.listKuliah())
+##print(m234.listKuliah)
 ###Run no 5
 ##m234.hapusKuliah('Matematika Diskrit')
-##print(m234.listKuliah())
+##print(m234.listKuliah)
 
 #6
 class SiswaSMA(Manusia):
@@ -163,6 +162,7 @@ class SiswaSMA(Manusia):
 ##print(siswa1)
 
 #7
+#beda file
 ##NIM = Mahasiswa
 ##ambilKotaTInggal = Mahasiswa
 ##ambilNIM = Mahasiswa
